@@ -1,0 +1,12 @@
+FROM node:8.8
+MAINTAINER Flynn Mattson
+
+WORKDIR /var/www/client
+ADD ./client/package.json /var/www/client
+ADD ./client/yarn.lock /var/www/client
+RUN yarn
+
+EXPOSE 3000
+EXPOSE 35729
+
+CMD ["yarn", "start"]

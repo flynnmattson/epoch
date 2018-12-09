@@ -1,0 +1,17 @@
+{
+  "name": "epoch",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Flynn Mattson",
+  "private": true,
+  "scripts": {
+    "server": "nodemon -L index.js"
+  },
+  "dependencies": {
+    "express": "4.16.2",
+    "socket.io": "2.0.4",
+    "socket.io-redis": "5.2.0",
+    "redis": "2.8.0",
+    "lodash": "4.17.4"
+  }
+}

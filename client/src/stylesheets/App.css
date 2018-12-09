@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+#hand .selected {
+  background-color: grey;
+}
+
+#hand .not-selected {
+
+}
+
+/* Resource Styling */
+#resource .resource-header {
+  padding-bottom: 5px;
+}
+#resource .resource-chip {
+  padding: .1em .45em .11em;
+  margin: 0 .05em 0 0;
+  border-radius: 10em;
+  background-color: #31436c;
+  vertical-align: baseline;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+}
+#resource .resource-number {
+  width: 1em;
+  vertical-align: baseline;
+  margin: 0!important;
+  height: .85714286em;
+  font-size: 1em;
+  color: white;
+}
+
+.game-area-container {
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.board-container {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  box-shadow: rgb(204, 204, 204) 0px 0px 30px
+}
+
+.hand-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.message {
+  text-align: center;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

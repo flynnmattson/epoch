@@ -1,0 +1,38 @@
+version: '3'
+services:
+  # NOTE: create-react-app does not hot reload when running from a docker container
+  #       Running locally on the computer instead. Here is the commented out container.
+  # client:
+  #   container_name: epoch_client
+  #   build:
+  #     context: .
+  #     dockerfile: dockerfile-client
+  #   hostname: epoch
+  #   links:
+  #     - server:server
+  #   volumes:
+  #     - ./client:/var/www/client
+  #     - /var/www/client/node_modules
+  #   ports:
+  #     - "3000:3000"
+  #     - "35729:35729"
+  #   depends_on:
+  #     - server
+  server:
+    container_name: epoch_server
+    build:
+      context: .
+      dockerfile: dockerfile-server
+    volumes:
+      - ./server:/var/www/server
+      - /var/www/server/node_modules
+    ports:
+      - "3001:3001"
+    links:
+      - redis:redis
+  redis:
+    container_name: epoch_redis
+    image: "redis:3.2"
+volumes:
+  dbdata:
+    driver: local
